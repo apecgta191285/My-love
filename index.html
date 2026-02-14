@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
@@ -14,11 +14,15 @@
   <div class="orb orb-left" aria-hidden="true"></div>
   <div class="orb orb-right" aria-hidden="true"></div>
 
+  <button id="theme-toggle" class="theme-btn" aria-label="เปลี่ยนธีม">🌙</button>
+
   <main class="container">
     <section class="hero panel">
       <div class="hero-text">
         <p class="label">For Ajii</p>
+        <div class="date-counter"></div>
         <h1>เว็บเล็กๆ เพื่อบอกว่า<br />เรารักแอจิมากนะ</h1>
+        <div class="quote-carousel"></div>
         <p>
           เวอร์ชันหวานละมุน ที่เก็บทุกความทรงจำของเราไว้ในหน้าเดียว
           กดเล่นทีละส่วนได้เลย
@@ -27,13 +31,20 @@
           <button id="openLetterBtn" class="btn">เปิดจดหมายรัก</button>
           <button id="burstBtn" class="btn btn-soft">ปล่อยหัวใจ</button>
         </div>
+        <div class="music-player">
+          <button id="play" class="btn-icon" aria-label="เล่นเพลง">▶</button>
+          <button id="pause" class="btn-icon" aria-label="หยุดเพลง">⏸</button>
+          <audio id="bgMusic" loop>
+            <source src="" type="audio/mp3">
+          </audio>
+        </div>
       </div>
       <div class="hero-photo">
         <img src="assets/photos/20250812_194723.jpg" alt="ภาพความทรงจำของเรา" loading="eager" />
       </div>
     </section>
 
-    <section class="panel hidden revealable" id="letterSection">
+    <section class="panel reveal" id="letterSection">
       <h2>ถึงแอจิ ผู้หญิงที่น่ารักที่สุดของเรา</h2>
       <p>
         ขอบคุณที่เข้ามาเป็นความสบายใจในทุกวันของเรา
@@ -46,7 +57,22 @@
       <p class="signature">รักเธอเสมอ ไม่เปลี่ยนใจ</p>
     </section>
 
-    <section class="panel hidden revealable" id="videoSection">
+    <section class="panel reveal" id="paloSection">
+      <h2>เจ้าพะโล้สุดแสบ (แต่ก็น่ารัก)</h2>
+      <div class="palo-grid">
+        <div class="palo-card">
+            <img src="assets/photos/palo_close_up.jpg" alt="พะโล้ใกล้ๆ" loading="lazy">
+            <p>หน้าตาตอนขอขนม</p>
+        </div>
+        <div class="palo-card">
+            <img src="assets/photos/palo_on_bed.jpg" alt="พะโล้นอน" loading="lazy">
+            <p>ท่านอนประจำตัว</p>
+        </div>
+      </div>
+      <p>พยานรักตัวน้อยของเรา</p>
+    </section>
+
+    <section class="panel reveal" id="videoSection">
       <h2>มุมวิดีโอความทรงจำ</h2>
       <div class="video-grid">
         <article class="video-card">
@@ -64,7 +90,7 @@
       </div>
     </section>
 
-    <section class="panel hidden revealable" id="flipSection">
+    <section class="panel reveal" id="flipSection">
       <h2>กดการ์ดแล้วจะรู้ว่าเราคิดอะไรอยู่</h2>
       <div class="flip-grid">
         <button class="flip-card" type="button">
@@ -86,7 +112,7 @@
       </div>
     </section>
 
-    <section class="panel hidden revealable" id="gallerySection">
+    <section class="panel reveal" id="gallerySection">
       <h2>แกลเลอรีของเรา (คลิกรูปเพื่อดูเต็ม)</h2>
       <div class="gallery">
         <button type="button" class="shot" data-caption="ทุกครั้งที่ยิ้มด้วยกัน โลกน่ารักขึ้น">
@@ -110,13 +136,16 @@
       </div>
     </section>
 
-    <section class="panel hidden revealable" id="finalSection">
+    <section class="panel reveal" id="finalSection">
       <h2>กล่องคำสัญญา</h2>
       <p class="hint">กดปุ่มด้านล่างเพื่อสุ่มคำหวานใหม่ๆ</p>
       <button id="promiseBtn" class="btn">สุ่มคำสัญญา</button>
       <p id="promiseText" class="promise">เราจะอยู่ข้างเธอให้มากที่สุดเท่าที่เราจะทำได้</p>
       <button id="finalBtn" class="btn btn-soft">คลิกเพื่อรับกอดออนไลน์</button>
       <p id="finalMessage" class="final hidden">วันนี้รักเธอมาก และพรุ่งนี้จะรักให้มากขึ้นอีก</p>
+      <div class="quote-container">
+        <p class="quote">Love is in the air!</p>
+      </div>
     </section>
   </main>
 
