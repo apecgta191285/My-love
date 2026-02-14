@@ -215,9 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
         let index = 0;
 
-        // Ensure transition property
-        quoteCarousel.style.transition = "opacity 0.5s ease";
-
         function showQuote() {
             quoteCarousel.style.opacity = 0;
             setTimeout(() => {
