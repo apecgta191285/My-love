@@ -145,27 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 9. Music Player
-    const audio = document.getElementById('bgMusic');
-    const playBtn = document.getElementById('play');
-    const pauseBtn = document.getElementById('pause');
-
-    if (audio && playBtn && pauseBtn) {
-        playBtn.addEventListener('click', () => {
-            const source = audio.querySelector('source');
-            if (source && source.src && source.src !== window.location.href) {
-                 audio.play().catch(e => {
-                     console.log("Audio play failed:", e);
-                     alert("ไม่สามารถเล่นเพลงได้ (Browser might block autoplay or file missing)");
-                 });
-            } else {
-                alert("ยังไม่ได้ใส่เพลงนะ!");
-            }
-        });
-        pauseBtn.addEventListener('click', () => {
-            audio.pause();
-        });
-    }
+    // 9. Music Player (Removed: using Spotify Embed)
 
     // 10. Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
