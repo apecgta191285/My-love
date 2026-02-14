@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Soft Love Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;700&family=Pridi:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+  <div class="orb orb-left" aria-hidden="true"></div>
+  <div class="orb orb-right" aria-hidden="true"></div>
+
+  <main class="container">
+    <section class="hero panel">
+      <div class="hero-text">
+        <p class="label">For Ajii</p>
+        <h1>เว็บเล็กๆ เพื่อบอกว่า<br />เรารักแอจิมากนะ</h1>
+        <p>
+          เวอร์ชันหวานละมุน ที่เก็บทุกความทรงจำของเราไว้ในหน้าเดียว
+          กดเล่นทีละส่วนได้เลย
+        </p>
+        <div class="hero-actions">
+          <button id="openLetterBtn" class="btn">เปิดจดหมายรัก</button>
+          <button id="burstBtn" class="btn btn-soft">ปล่อยหัวใจ</button>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/photos/20250812_194723.jpg" alt="ภาพความทรงจำของเรา" loading="eager" />
+      </div>
+    </section>
+
+    <section class="panel hidden revealable" id="letterSection">
+      <h2>ถึงแอจิ ผู้หญิงที่น่ารักที่สุดของเรา</h2>
+      <p>
+        ขอบคุณที่เข้ามาเป็นความสบายใจในทุกวันของเรา
+        วันที่เหนื่อยเธอทำให้ใจอุ่น วันที่ดีเธอทำให้ดีขึ้นไปอีก
+      </p>
+      <p>
+        เราอาจไม่ได้สมบูรณ์แบบ แต่เราจะตั้งใจรักเธอให้ดีที่สุดทุกวัน
+        ทั้งวันธรรมดา และวันพิเศษแบบวันนี้
+      </p>
+      <p class="signature">รักเธอเสมอ ไม่เปลี่ยนใจ</p>
+    </section>
+
+    <section class="panel hidden revealable" id="videoSection">
+      <h2>มุมวิดีโอความทรงจำ</h2>
+      <div class="video-grid">
+        <article class="video-card">
+          <video controls playsinline preload="metadata" poster="assets/photos/20251027_152843.jpg">
+            <source src="assets/videos/1748541148685.mp4" type="video/mp4" />
+          </video>
+          <p>คลิปที่ดูแล้วคิดถึงเธอทันที</p>
+        </article>
+        <article class="video-card">
+          <video controls playsinline preload="metadata" poster="assets/photos/20251027_152735.jpg">
+            <source src="assets/videos/1762704944068 (1).mp4" type="video/mp4" />
+          </video>
+          <p>ช่วงเวลาธรรมดาที่พิเศษมาก</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel hidden revealable" id="flipSection">
+      <h2>กดการ์ดแล้วจะรู้ว่าเราคิดอะไรอยู่</h2>
+      <div class="flip-grid">
+        <button class="flip-card" type="button">
+          <span class="front">รอยยิ้ม</span>
+          <span class="back">รอยยิ้มเธอคือพลังใจของเรา</span>
+        </button>
+        <button class="flip-card" type="button">
+          <span class="front">สายตา</span>
+          <span class="back">แค่เธอมองมา เราก็ใจอ่อนแล้ว</span>
+        </button>
+        <button class="flip-card" type="button">
+          <span class="front">เสียงหัวเราะ</span>
+          <span class="back">เสียงหัวเราะเธอทำให้วันแย่ๆ หายไป</span>
+        </button>
+        <button class="flip-card" type="button">
+          <span class="front">กอด</span>
+          <span class="back">กอดของเธอคือที่ปลอดภัยที่สุดของเรา</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="panel hidden revealable" id="gallerySection">
+      <h2>แกลเลอรีของเรา (คลิกรูปเพื่อดูเต็ม)</h2>
+      <div class="gallery">
+        <button type="button" class="shot" data-caption="ทุกครั้งที่ยิ้มด้วยกัน โลกน่ารักขึ้น">
+          <img src="assets/photos/1738512095788.jpg" alt="รูปคู่ช่วงกลางคืน" loading="lazy" />
+        </button>
+        <button type="button" class="shot" data-caption="โมเมนต์แกล้งกันของเรา น่ารักทุกเฟรม">
+          <img src="assets/photos/1753965957073.jpg" alt="รูปคู่เซลฟี่" loading="lazy" />
+        </button>
+        <button type="button" class="shot" data-caption="อยู่ข้างกันแล้วสบายใจเสมอ">
+          <img src="assets/photos/1762213570164.jpg" alt="รูปคู่กระจก" loading="lazy" />
+        </button>
+        <button type="button" class="shot" data-caption="ภาพนี้เราชอบมาก เพราะมีทั้งเธอและท้องฟ้าสวยๆ">
+          <img src="assets/photos/20250812_194719.jpg" alt="รูปเดี่ยวเธอในช่วงพระอาทิตย์ตก" loading="lazy" />
+        </button>
+        <button type="button" class="shot" data-caption="ยิ้มแบบนี้ทีไร ใจเราแพ้ทุกที">
+          <img src="assets/photos/20251027_152843.jpg" alt="รูปเดี่ยวเธอ" loading="lazy" />
+        </button>
+        <button type="button" class="shot" data-caption="รูปนี้คือคำว่าอบอุ่นชัดที่สุด">
+          <img src="assets/photos/20251027_152735.jpg" alt="รูปคู่มอเตอร์ไซค์" loading="lazy" />
+        </button>
+      </div>
+    </section>
+
+    <section class="panel hidden revealable" id="finalSection">
+      <h2>กล่องคำสัญญา</h2>
+      <p class="hint">กดปุ่มด้านล่างเพื่อสุ่มคำหวานใหม่ๆ</p>
+      <button id="promiseBtn" class="btn">สุ่มคำสัญญา</button>
+      <p id="promiseText" class="promise">เราจะอยู่ข้างเธอให้มากที่สุดเท่าที่เราจะทำได้</p>
+      <button id="finalBtn" class="btn btn-soft">คลิกเพื่อรับกอดออนไลน์</button>
+      <p id="finalMessage" class="final hidden">วันนี้รักเธอมาก และพรุ่งนี้จะรักให้มากขึ้นอีก</p>
+    </section>
+  </main>
+
+  <div class="lightbox hidden" id="lightbox" role="dialog" aria-modal="true" aria-label="ดูภาพขนาดใหญ่">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="ปิด">×</button>
+    <img id="lightboxImage" src="" alt="ภาพขยาย" />
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
