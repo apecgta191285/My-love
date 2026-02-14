@@ -326,18 +326,14 @@ p {
 }
 
 .reveal {
-  animation: reveal 0.7s ease both;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
 }
 
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .lightbox {
@@ -414,5 +410,167 @@ p {
 
   .btn {
     width: 100%;
+  }
+}
+
+/* --- New Styles Added --- */
+
+/* Dark Theme Support */
+body.dark-theme {
+  --cream: #2a2a2a;
+  --peach: #3a3a3a;
+  --sunset: #8e5e5e;
+  --rose: #b86e7a;
+  --brown: #e0d0cc;
+  --line: rgba(255, 255, 255, 0.15);
+  --panel: rgba(40, 40, 40, 0.85);
+  --shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+  background: radial-gradient(circle at 10% 15%, #333 0%, transparent 35%),
+              radial-gradient(circle at 80% 20%, #444 0%, transparent 34%),
+              linear-gradient(140deg, #1a1a1a, #2c2c2c);
+  color: var(--brown);
+}
+
+body.dark-theme .orb {
+  opacity: 0.15;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme .label {
+  color: #ffecd1;
+}
+
+body.dark-theme .btn-soft {
+  background: linear-gradient(90deg, #8a5a5a, #a07070);
+  color: #fff;
+}
+
+body.dark-theme .video-card,
+body.dark-theme .flip-card,
+body.dark-theme .promise,
+body.dark-theme .palo-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--line);
+    color: var(--brown);
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.theme-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Date Counter & Quote Carousel */
+.date-counter {
+  font-family: "Pridi", serif;
+  font-size: 0.9rem;
+  color: var(--rose);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.quote-carousel {
+  font-size: 1rem;
+  color: var(--brown);
+  font-style: italic;
+  margin: 10px 0;
+  min-height: 1.5em;
+}
+
+/* Music Player Controls */
+.music-player {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--rose);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-icon:hover {
+  transform: scale(1.1);
+  background: #d66a80;
+}
+
+/* Palo Section Styles */
+.palo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.palo-card {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 8px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid var(--line);
+}
+
+.palo-card img {
+  width: 100%;
+  border-radius: 8px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.palo-card p {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Footer Quote */
+.quote-container {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid var(--line);
+    padding-top: 15px;
+}
+
+.quote {
+    font-family: "Mali", cursive;
+    color: var(--brown);
+    font-size: 1.1rem;
+}
+
+/* Additional Responsive Adjustments */
+@media (max-width: 620px) {
+  .palo-grid {
+    grid-template-columns: 1fr;
   }
 }
